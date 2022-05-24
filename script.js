@@ -34,11 +34,10 @@ class Employee extends Person {
     }
 
     celebrate() {
-        const birthDay = new Date()
+        const birthDay = new Date(this.birthDayDate)
         const currentYear = birthDay.setFullYear(birthDay.getFullYear())
 
-        isWeekend(currentYear)
-        if (isWeekend(this.birthDayDate)) {
+        if (isWeekend(currentYear)) {
             return super.celebrate()
         } else {
             return "Happy Birthday, but I need to work"
